@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KZG-bS-fd1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="UXl-xt-i09">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" id="KZG-bS-fd1" customClass="WeatherViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZU5-YW-Tat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_weather" translatesAutoresizingMaskIntoConstraints="NO" id="bun-d8-Ywv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Москва" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-m5-yXu">
+                                <rect key="frame" x="0.0" y="92" width="414" height="55"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погодные условия " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gru-BA-JFc">
+                                <rect key="frame" x="16" y="171" width="382" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdx-Na-qaW">
+                                <rect key="frame" x="40" y="217" width="214" height="59"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yba-5U-SS4">
+                                <rect key="frame" x="270" y="217" width="55" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Apg-Hm-ppr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pEF-G6-G4S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pEF-G6-G4S" firstAttribute="trailing" secondItem="bun-d8-Ywv" secondAttribute="trailing" id="0ND-4d-6ny"/>
+                            <constraint firstItem="pEF-G6-G4S" firstAttribute="trailing" secondItem="Tdx-Na-qaW" secondAttribute="trailing" constant="160" id="8Zh-zy-omx"/>
+                            <constraint firstAttribute="trailing" secondItem="bun-d8-Ywv" secondAttribute="trailing" id="9PV-zh-tKx"/>
+                            <constraint firstItem="Gru-BA-JFc" firstAttribute="top" secondItem="hU1-m5-yXu" secondAttribute="bottom" constant="24" id="JZZ-8W-Pc1"/>
+                            <constraint firstItem="yba-5U-SS4" firstAttribute="top" secondItem="Gru-BA-JFc" secondAttribute="bottom" constant="16" id="KPX-Ru-RyZ"/>
+                            <constraint firstItem="pEF-G6-G4S" firstAttribute="bottom" secondItem="bun-d8-Ywv" secondAttribute="bottom" id="LfF-wt-rGa"/>
+                            <constraint firstItem="bun-d8-Ywv" firstAttribute="top" secondItem="pEF-G6-G4S" secondAttribute="top" id="MD4-YY-tBc"/>
+                            <constraint firstItem="bun-d8-Ywv" firstAttribute="leading" secondItem="pEF-G6-G4S" secondAttribute="leading" id="XnK-Jk-xjg"/>
+                            <constraint firstItem="bun-d8-Ywv" firstAttribute="leading" secondItem="ZU5-YW-Tat" secondAttribute="leading" id="YdG-Yy-SuI"/>
+                            <constraint firstItem="yba-5U-SS4" firstAttribute="leading" secondItem="Tdx-Na-qaW" secondAttribute="trailing" constant="16" id="a9w-ve-bin"/>
+                            <constraint firstAttribute="bottom" secondItem="bun-d8-Ywv" secondAttribute="bottom" constant="34" id="eBD-DZ-2Gl"/>
+                            <constraint firstItem="Tdx-Na-qaW" firstAttribute="leading" secondItem="pEF-G6-G4S" secondAttribute="leading" constant="40" id="fxA-Gj-NGJ"/>
+                            <constraint firstItem="Tdx-Na-qaW" firstAttribute="top" secondItem="Gru-BA-JFc" secondAttribute="bottom" constant="16" id="hgd-Vc-JYT"/>
+                            <constraint firstItem="yba-5U-SS4" firstAttribute="centerY" secondItem="Tdx-Na-qaW" secondAttribute="centerY" id="ho0-gh-S1R"/>
+                            <constraint firstItem="pEF-G6-G4S" firstAttribute="trailing" secondItem="yba-5U-SS4" secondAttribute="trailing" constant="89" id="jMd-c4-0en"/>
+                            <constraint firstItem="hU1-m5-yXu" firstAttribute="leading" secondItem="pEF-G6-G4S" secondAttribute="leading" id="rvQ-sH-1kX"/>
+                            <constraint firstItem="bun-d8-Ywv" firstAttribute="top" secondItem="ZU5-YW-Tat" secondAttribute="top" constant="44" id="sDv-KL-hs6"/>
+                            <constraint firstItem="Gru-BA-JFc" firstAttribute="leading" secondItem="pEF-G6-G4S" secondAttribute="leading" constant="16" id="vpB-bK-B5c"/>
+                            <constraint firstItem="pEF-G6-G4S" firstAttribute="trailing" secondItem="hU1-m5-yXu" secondAttribute="trailing" id="xSs-V7-ief"/>
+                            <constraint firstItem="hU1-m5-yXu" firstAttribute="top" secondItem="pEF-G6-G4S" secondAttribute="top" constant="48" id="zF6-tF-sop"/>
+                            <constraint firstItem="pEF-G6-G4S" firstAttribute="trailing" secondItem="Gru-BA-JFc" secondAttribute="trailing" constant="16" id="zYp-5O-r33"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Qv-iP-Xzs"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="hU1-m5-yXu" id="QAc-ZM-vFd"/>
+                        <outlet property="temperatureLabel" destination="Tdx-Na-qaW" id="DiS-Vu-WiZ"/>
+                        <outlet property="weatherDescriptiinLabel" destination="Gru-BA-JFc" id="vCe-ST-w3y"/>
+                        <outlet property="weatherIconImageView" destination="yba-5U-SS4" id="gB7-M1-nuU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsK-Me-u1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739.1304347826087" y="92.410714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_weather" width="750" height="1334"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
